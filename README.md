@@ -1,5 +1,6 @@
 ![example workflow](https://github.com/GenVas/yamdb_final/actions/workflows/main.yml/badge.svg)
 
+# Проект запущен на сервере и доступен по адресу: 84.201.175.214
 # Docker для сервиса API YaMDB
 
 Это тестовый проект Django для запуска API через Docker.
