@@ -1,27 +1,27 @@
 from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin
 
-from .models import Category, Genre, Title, Review, User
+from . import models
 
 
-@admin.register(Category)
+@admin.register(models.Category)
 class CategoryAdmin(admin.ModelAdmin):
     list_display = ("name", "slug")
     search_fields = ("name",)
 
 
-@admin.register(Genre)
+@admin.register(models.Genre)
 class GenreAdmin(admin.ModelAdmin):
     list_display = ("name", "slug")
     search_fields = ("name",)
 
 
-@admin.register(Review)
+@admin.register(models.Review)
 class ReviewAdmin(admin.ModelAdmin):
     list_display = ('text', 'title', 'score')
 
 
-@admin.register(Title)
+@admin.register(models.Title)
 class TitleAdmin(admin.ModelAdmin):
     list_display = (
         "name", "year", "description", "category",
@@ -30,7 +30,7 @@ class TitleAdmin(admin.ModelAdmin):
     empty_value_display = '-empty-'
 
 
-@admin.register(User)
+@admin.register(models.User)
 class MyUserAdmin(UserAdmin):
 
     list_display = [
