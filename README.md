@@ -26,7 +26,7 @@
 - Клонировать и перейти в репозиторий с помощью терминала:
 
    ```sh
-   git clone https://github.com/GenVas/infra_sp2
+   git clone https://github.com/GenVas/yamdb_final
    ```
 
    ```sh
@@ -101,6 +101,44 @@
    docker exec -it <номер контейнера> bash
    ```
 
+## Работа с проектов на удаленном сервере
+
+Сразу после клонирования проекта сделайте следующее:
+
+- Установите Docker и Docker-compose. Эта команда скачает скрипт для установки докера:
+
+   Инструкция по установке доступна в официальной документации [https://www.docker.com/get-started]
+
+- скопируйте Docker-compose.yaml файл на сервер, например, c помошью scp
+- скорпируйте папку nginx/ с конфигурацией сервера nginx в ту же директорию, где назодится файл Docker-compose
+
+- добавьте в Secrets в разделе Actions репозитария своего проекта в разделе настройки следующие
+secrets:
+
+   Доступ к Docker:
+      DOCKER_USERNAME
+      DOCKER_PASSWORD
+   Доступ к вашему серверу:
+      HOST - IP server
+	   USER - имя пользователя
+	   PASSPHRASE пароль, если есть
+	   SSH_KEY: ключ для доступа
+   Cекретный ключ джанго:
+      SECRET_KEY 
+   Параметры базы данных Postgres:
+      DB_ENGINE
+      DB_NAME
+      POSTGRES_USER
+      POSTGRES_PASSWORD
+      DB_HOST
+      DB_PORT
+   Телеграм:
+      TELEGRAM_TO: ID аккаунта для получения сообщений
+	   TELEGRAM_TOKEN: токен вашего бота для отправки сообщений
+
+- перед отправкой кода на сервер проверьте, не занят ли порт nginx. Принеобходимости, остановите Nginx
+
+   sudo systemctl stop nginx
 
 
 ## Тип лицензии
@@ -114,4 +152,5 @@ MIT
    [GenVas/api_yamdb]: https://github.com/GenVas/api_yamdb.git 
    [postgres:12.4-alpine] https://hub.docker.com/r/onjin/alpine-postgres/
    [nginx:1.19.3-alpine] https://hub.docker.com/layers/nginx/library/nginx/1.19.3-alpine/images/sha256-4e21f77cde9aaeb846dc799b934a42b66939d19755d98829b705270e916c7479?context=explore 
+   [GitHub Actions] https://docs.github.com/en/actions
    
