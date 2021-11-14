@@ -1,3 +1,5 @@
+![example workflow](https://github.com/GenVas/yamdb_final/actions/workflows/main.yml/badge.svg)
+
 # Docker для сервиса API YaMDB
 
 Это тестовый проект Django для запуска API через Docker.
