@@ -1,10 +1,7 @@
 from django.core.exceptions import ValidationError
 from rest_framework import serializers
-from reviews.models import (
-    Category, Comment, Genre,
-    # GenreTitle,
-    Review, Title, User
-)
+
+from reviews.models import Category, Comment, Genre, Review, Title, User
 
 
 class ConfirmationTokenSerializer(serializers.Serializer):

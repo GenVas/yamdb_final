@@ -8,8 +8,6 @@ from rest_framework import (filters, generics, mixins, pagination, permissions,
                             response, status, views, viewsets)
 from rest_framework.decorators import action
 from rest_framework_simplejwt.tokens import RefreshToken
-from reviews.models import Category, Genre, Review, Title, User
-from reviews.tokens import account_activation_token
 
 from api.filters import TitleFilter
 from api.permissions import (IsAdmin, IsAdminOrReadOnly,
@@ -19,6 +17,8 @@ from api.serializers import (CategorySerializer, CommentSerializer,
                              ReadTitleSerializer, RegistrationSerializer,
                              ReviewSerializer, UserSerializer,
                              WriteTitleSerializer)
+from reviews.models import Category, Genre, Review, Title, User
+from reviews.tokens import account_activation_token
 
 
 class ConfirmationViewSet(views.APIView):
