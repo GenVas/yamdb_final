@@ -3,16 +3,9 @@ from django.urls.conf import include
 from rest_framework.routers import DefaultRouter
 from rest_framework_simplejwt.views import TokenRefreshView
 
-from api.views import (
-    CategoryViewSet,
-    CommentViewSet,
-    ConfirmationViewSet,
-    GenreViewSet,
-    RegistrationView,
-    ReviewViewSet,
-    TitleViewSet,
-    UserViewSet,
-)
+from api.views import (CategoryViewSet, CommentViewSet, ConfirmationViewSet,
+                       GenreViewSet, RegistrationView, ReviewViewSet,
+                       TitleViewSet, UserViewSet)
 
 v1_router = DefaultRouter()
 
