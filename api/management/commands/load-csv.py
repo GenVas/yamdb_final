@@ -3,16 +3,8 @@ import glob
 import os
 
 from django.core.management.base import BaseCommand
-
-from reviews.models import (
-    Category,
-    Comment,
-    Genre,
-    GenreTitle,
-    Review,
-    Title,
-    User,
-)
+from reviews.models import (Category, Comment, Genre, GenreTitle, Review,
+                            Title, User)
 
 MODELS_CONTAINER = [
     User,
