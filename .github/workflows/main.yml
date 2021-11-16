@@ -10,8 +10,6 @@ jobs:
     - uses: actions/checkout@v2
     - name: Set up Python 
       uses: actions/setup-python@v2
-    strategy:
-      matrix:
       with:
       - python-version: 3.8
       - python-version: 3.7
