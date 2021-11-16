@@ -10,8 +10,8 @@ RUN python -m pip install --upgrade pip
 
 # поставил gunicorn отдельно, чтобы можно
 # было удобно менять сервер в докер-файле
-RUN pip install gunicorn gunicorn==20.0.4  
-RUN pip3 install -r requirements.txt
+RUN pip install gunicorn gunicorn==20.0.4 & \ 
+    pip3 install -r requirements.txt
 
 COPY . .
 
