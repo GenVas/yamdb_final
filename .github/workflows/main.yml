@@ -8,12 +8,12 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        steps:
-        - uses: actions/checkout@v2
-        - name: Set up Python 
-          uses: actions/setup-python@v2
-          with:
-            python-versions: [3.8, 3.9]
+        python-versions: ["3.8", "3.9"]
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python 
+      uses: actions/setup-python@v2
     - name: Install dependencies
       run: | 
         # обновление pip
