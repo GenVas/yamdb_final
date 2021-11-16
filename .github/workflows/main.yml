@@ -14,7 +14,6 @@ jobs:
         with:
           matrix:
             python-version: ["3.8", "3.9"]
-
     - name: Install dependencies
       run: | 
         # обновление pip
