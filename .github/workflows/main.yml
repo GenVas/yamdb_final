@@ -6,14 +6,13 @@ jobs:
   
   tests:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        python-versions: ["3.8"]
-
     steps:
     - uses: actions/checkout@v2
     - name: Set up Python 
       uses: actions/setup-python@v2
+        strategy:
+          matrix:
+            python-versions: ["3.7", "3.8"]
     - name: Install dependencies
       run: | 
         # обновление pip
