@@ -7,8 +7,11 @@ WORKDIR /code
 COPY requirements.txt .
 
 RUN python -m pip install --upgrade pip
-RUN pip install gunicorn gunicorn==20.0.4
-RUN pip3 install -r /code/requirements.txt
+
+# поставил gunicorn отдельно, чтобы можно
+# было удобно менять сервер в докер-файле
+RUN pip install gunicorn gunicorn==20.0.4  
+RUN pip3 install -r requirements.txt
 
 COPY . .
 
