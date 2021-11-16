@@ -22,6 +22,7 @@ INSTALLED_APPS = [
     "django_filters",
     "api",
     "reviews",
+    'drf_yasg',
 ]
 
 MIDDLEWARE = [
@@ -163,5 +164,15 @@ EMAIL_FILE_PATH = os.environ.get('EMAIL_FILE_PATH', default='/code/sent_emails/'
 CACHES = {
     "default": {
         "BACKEND": "django.core.cache.backends.locmem.LocMemCache",
+    }
+}
+
+SWAGGER_SETTINGS = {
+    'SECURITY_DEFINITIONS': {
+        'Bearer': {
+            'type': 'apiKey',
+            'name': 'Authorization',
+            'in': 'header'
+        }
     }
 }

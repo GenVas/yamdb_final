@@ -55,6 +55,7 @@ wcwidth==0.1.8
 wrapt==1.12.1
 yapf==0.31.0
 zipp==2.2.0
+drf-yasg
 
 asgiref==3.2.10
 Django==3.0.5
