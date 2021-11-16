@@ -13,7 +13,7 @@ jobs:
       with:
     strategy:
       matrix:
-        python-version: 3.8
+        python-version: ["3,7", "3.8"]
     - name: Install dependencies
       run: | 
         # обновление pip
