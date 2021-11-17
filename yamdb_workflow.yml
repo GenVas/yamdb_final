@@ -86,7 +86,7 @@ jobs:
       with:
         to: ${{ secrets.TELEGRAM_TO }}
         token: ${{ secrets.TELEGRAM_TOKEN }}
-        message: ${{ github.workflow }} успешно задеплоен!
+        message: ${{ github.workflow }} успешно выполнен!
   
   send_message_failure:
       if: ${{ failure() }}
@@ -98,4 +98,4 @@ jobs:
         with:
           to: ${{ secrets.TELEGRAM_TO }}
           token: ${{ secrets.TELEGRAM_TOKEN }}
-          message: ${{ github.workflow }} workflow НЕ выполнен!
+          message: ${{ github.workflow }} НЕ выполнен!
