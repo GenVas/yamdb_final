@@ -2,8 +2,8 @@ name: yamdb_final workflow
 
 on:
   push:
-    branches:
-    - master
+    # branches:
+    # - master
 
 jobs:
   
@@ -37,6 +37,8 @@ jobs:
         # запустить написанные разработчиком тесты
         pytest #python manage.py test
 
+    branches:
+    - master
 
   build_and_push_to_docker_hub:
     name: Push Docker image to Docker Hub
