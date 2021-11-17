@@ -1,6 +1,6 @@
 ![example workflow](https://github.com/GenVas/yamdb_final/actions/workflows/main.yml/badge.svg)
 
-# Docker для сервиса API YaMDB
+# Запуск сервиса API YaMDB на сервере через Docker
 ## Проект запущен на сервере и доступен по адресу: http://84.201.175.214/redoc/
 
 Это тестовый проект Django для запуска API через Docker.
