@@ -96,10 +96,9 @@ jobs:
       runs-on: ubuntu-latest
       needs: deploy
       steps:
-      - name: send message
+      - name: send failure message
         uses: appleboy/telegram-action@master
         with:
           to: ${{ secrets.TELEGRAM_TO }}
           token: ${{ secrets.TELEGRAM_TOKEN }}
-          message: ${{ github.workflow }} успешно задеплоен!
-
+          message: ${{ github.workflow }} workflow НЕ выполнен!
