@@ -31,7 +31,7 @@
    ```
 
    ```sh
-   cd infra_sp2
+   cd yamdb_final
    ```
 
 - Создать виртуальную среду
