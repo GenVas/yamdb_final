@@ -36,7 +36,8 @@ jobs:
         # cd infra_project/
         # запустить написанные разработчиком тесты
         pytest #python manage.py test
-
+on:
+  push:
     branches:
     - master
 
